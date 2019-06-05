@@ -16,7 +16,7 @@
 
     <!-- Footer -->
     <v-footer fixed app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>&copy; {{ new Date().getFullYear() }} nuxt.js + firebase</span>
     </v-footer>
     <!-- //Footer -->
 
