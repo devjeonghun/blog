@@ -1,8 +1,6 @@
 const nodeExternals = require('webpack-node-externals')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
-import bodyParser from 'body-parser'
-
 module.exports = {
   /*
   ** Headers of the page
@@ -12,17 +10,20 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt + Vuetify Template Customizing' }
+      { hid: 'description', name: 'description', content: 'blog' }
     ],
     script:[
       {type:'text/javascript',src:''}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/blog/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
-  plugins: ['~/plugins/vuetify.js'],
+  plugins: [
+    '~/plugins/vuetify.js',
+    '~/plugins/firebase.js'
+  ],
   css: ['~/assets/style/app.styl'],
 
   /*
@@ -75,15 +76,5 @@ module.exports = {
         ]
       }
     }
-  },
-
-  /*
-  ** Add server middleware
-  ** Nuxt.js uses `connect` module as server
-  ** So most of express middleware works with nuxt.js server middleware
-  */
-  serverMiddleware: [
-    // body-parser middleware
-    bodyParser.json()
-  ]
+  }
 }

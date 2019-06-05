@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 export const state = () => ({
   sidebar: false,
   authUser: null
@@ -36,7 +34,7 @@ export const actions = {
     if (!data.id) {
       throw new Error('로그인에 실패했습니다.')
     }*/
-    commit('LOGIN', data.id)
+    /*commit('LOGIN', data.id)*/
   },
   async logout({ commit }) {
     /*await axios.post('/apis/logout').then(() => commit('LOGOUT'))*/
