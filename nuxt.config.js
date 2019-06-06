@@ -31,7 +31,7 @@ module.exports = {
   */
   router: {
     mode:'history',
-    base: '/blog/'
+    base: '/'
   },
 
   /*
@@ -76,5 +76,8 @@ module.exports = {
         ]
       }
     }
+  },
+  generate:{
+    dir:'../firebase-nuxt/public'
   }
 }
