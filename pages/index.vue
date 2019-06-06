@@ -17,7 +17,7 @@
                         <v-container fill-height fluid>
                             <v-layout fill-height>
                                 <v-flex xs12 align-end flexbox>
-                                    <span class="headline">{{item.title}}</span>
+                                    <span class="headline"></span>
                                 </v-flex>
                             </v-layout>
                         </v-container>
@@ -25,7 +25,7 @@
                     <v-card-title>
                         <div>
                             <span class="grey--text">{{item.date}}</span><br>
-                            <span>{{item.body}}</span><br>
+                            <span>{{item.title}}</span><br>
                         </div>
                     </v-card-title>
                     <v-card-actions>
@@ -42,7 +42,7 @@
         </v-layout>
         <div>
             <v-layout row justify-center>
-                <v-dialog v-model="postView" persistent scrollable max-width="1000px">
+                <v-dialog v-model="postView" fullscreen persistent scrollable max-width="1000px">
                     <NuxtChild @isCreated="isCreated" @isClose="isClose" :key="$route.params.id"/>
                 </v-dialog>
             </v-layout>
@@ -77,7 +77,7 @@
       txt: '',
       items: [],
       dialog: false,
-      postView:false
+      postView:false,
     }),
     mounted() {
     },
@@ -118,3 +118,8 @@
     }
   }
 </script>
+<style>
+    a{
+        text-decoration: none;
+    }
+</style>

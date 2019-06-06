@@ -1,8 +1,8 @@
 <template>
-  <v-app dark id="inspire">
+  <v-app :light="theme" :dark="!theme" id="inspire">
 
     <!-- Header -->
-    <Header>
+    <Header @isTheme="isTheme" :theme="this.theme">
     </Header>
     <!-- //Header -->
 
@@ -27,8 +27,9 @@
 import Header from '@/components/default/Header.vue'
 
 export default {
-  data: () => ({
 
+  data: () => ({
+    theme: true
   }),
   props: {
     source: String
@@ -38,6 +39,9 @@ export default {
   },
 
   methods: {
+    isTheme(val){
+      this.theme=!val;
+    }
   },
   components: {
     Header
