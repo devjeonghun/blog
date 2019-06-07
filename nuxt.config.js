@@ -21,7 +21,7 @@ module.exports = {
       {name:'theme-color', content:'#CA2327'}
       ,
       {hid:'og:type',        property: 'og:type', content: 'article'},
-      {hid:'og:url',         property: 'og:url', content: 'https://devjeonghun.cf/'},
+      {hid:'og:url',         property: 'og:url', content: 'http://immense-thicket-34880.herokuapp.com/'},
       {hid:'og:title',       property: 'og:title', content: 'devjeonghun 블로그'},
       {hid:'og:image',       property: 'og:image', content: 'https://avatars0.githubusercontent.com/u/15138190?s=460&v=4'},
       {hid:'og:description', property: 'og:description', content: '0과 1로 사는 프로그래머'}
